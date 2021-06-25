@@ -1,28 +1,29 @@
-
 import React from 'react';
-import {View,ScrollView} from 'react-native';
-import SampleComponent from './SampleComponent';
-import StylingReactnativeComponent from './StylingReactnativeComponent';
-import MateriFlexBox from './MateriFlexBox';
- 
+import {View, ScrollView} from 'react-native';
+import SampleComponent from './pages/SampleComponent';
+import StylingComponent from './pages/StylingComponent';
+// import MateriFlexBox from './pages/MateriFlexBox';
+// import PositionReactNative from '../PositionReactNative';
+
 //  todo tidak scroll
- const app = () => {
-   return (
-     <View>
-       <ScrollView>  
-        <MateriFlexBox/>
-         {/*<SampleComponent/> 
-        <StylingReactnativeComponent/>*/}   
-       </ScrollView>
-     </View>
-   );
- 
- }; 
- export default app;
+const app = () => {
+  return (
+    <View>
+      <ScrollView>
+         {/* <SampleComponent/> */}
+        <StylingComponent/> 
+        {/* <PositionReactNative/> 
+        <MateriFlexBox/>  */}
+      </ScrollView>
+    </View>
+  );
+};
+export default app;
 
 //https://www.youtube.com/watch?v=0YfdpjgBa6w&list=PLU4DS8KR-LJ3SP3PpRb870UoT_0_rjLpV&index=11
 //https://www.youtube.com/watch?v=Pmo83T83UrI&list=PLU4DS8KR-LJ3SP3PpRb870UoT_0_rjLpV&index=12
 //https://www.youtube.com/watch?v=YZfr6EYQjTk&list=PLU4DS8KR-LJ3SP3PpRb870UoT_0_rjLpV&index=13
+//https://www.youtube.com/watch?v=40vX41Qao5M&list=PLU4DS8KR-LJ3SP3PpRb870UoT_0_rjLpV&index=14
 //  a8esWnLN8mtbLdDxgfnF
 
 // //  /**
