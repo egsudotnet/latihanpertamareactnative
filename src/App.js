@@ -3,7 +3,8 @@ import {View, ScrollView} from 'react-native';
 import SampleComponent from './pages/SampleComponent';
   import StylingComponent from './pages/StylingComponent';
   import FlexBox from './pages/FlexBox';
-import Position from './pages//Position'; 
+import Position from './pages//Position';
+import PropsDinamis from './pages/PropsDinamis';
 //  todo tidak scroll
 const app = () => {
   // const [isShow, SetIsShow]= useState(true);
@@ -21,9 +22,9 @@ const app = () => {
         {/* <SampleComponent/>    
         <StylingComponent/>   */}
         {/* {isShow && <FlexBox/>} */}
-         {/* <Position/>   */}
-
-        <FlexBox />
+         {/* <Position/>   */} 
+        {/* <FlexBox /> */}
+        <PropsDinamis />
       </ScrollView>
     </View>
   );
