@@ -1,19 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {View, ScrollView} from 'react-native';
 import SampleComponent from './pages/SampleComponent';
-import StylingComponent from './pages/StylingComponent';
-// import MateriFlexBox from './pages/MateriFlexBox';
-// import PositionReactNative from '../PositionReactNative';
-
+  import StylingComponent from './pages/StylingComponent';
+  import FlexBox from './pages/FlexBox';
+import Position from './pages//Position'; 
 //  todo tidak scroll
 const app = () => {
+  const [isShow, SetIsShow]= useState(true);
+  useEffect(() => {
+    console.log("==> useEffect");
+    setTimeout(() => {
+      console.log("==> useEffect SetIsShow");
+      SetIsShow(false)
+    }, 6000);
+  }, [])
+
   return (
     <View>
       <ScrollView>
-         {/* <SampleComponent/> */}
-        <StylingComponent/> 
-        {/* <PositionReactNative/> 
-        <MateriFlexBox/>  */}
+        {/* <SampleComponent/>    
+        <StylingComponent/>   */}
+        {isShow && <FlexBox/>}
+         {/* <Position/>   */}
       </ScrollView>
     </View>
   );
@@ -24,6 +32,8 @@ export default app;
 //https://www.youtube.com/watch?v=Pmo83T83UrI&list=PLU4DS8KR-LJ3SP3PpRb870UoT_0_rjLpV&index=12
 //https://www.youtube.com/watch?v=YZfr6EYQjTk&list=PLU4DS8KR-LJ3SP3PpRb870UoT_0_rjLpV&index=13
 //https://www.youtube.com/watch?v=40vX41Qao5M&list=PLU4DS8KR-LJ3SP3PpRb870UoT_0_rjLpV&index=14
+//https://www.youtube.com/watch?v=gWqgPJ_j2LI&list=PLU4DS8KR-LJ3SP3PpRb870UoT_0_rjLpV&index=15 - React Native Debuger Siklus hidup ()
+//https://www.youtube.com/watch?v=Y6qXMEwp3ng&list=PLU4DS8KR-LJ3SP3PpRb870UoT_0_rjLpV&index=16 - Siklus hidup Fucntional Component
 //  a8esWnLN8mtbLdDxgfnF
 
 // //  /**
