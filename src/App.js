@@ -6,22 +6,24 @@ import SampleComponent from './pages/SampleComponent';
 import Position from './pages//Position'; 
 //  todo tidak scroll
 const app = () => {
-  const [isShow, SetIsShow]= useState(true);
-  useEffect(() => {
-    console.log("==> useEffect");
-    setTimeout(() => {
-      console.log("==> useEffect SetIsShow");
-      SetIsShow(false)
-    }, 6000);
-  }, [])
+  // const [isShow, SetIsShow]= useState(true);
+  // useEffect(() => {
+  //   console.log("==> useEffect");
+  //   setTimeout(() => {
+  //     console.log("==> useEffect SetIsShow");
+  //     SetIsShow(false)
+  //   }, 6000);
+  // }, [])
 
   return (
     <View>
       <ScrollView>
         {/* <SampleComponent/>    
         <StylingComponent/>   */}
-        {isShow && <FlexBox/>}
+        {/* {isShow && <FlexBox/>} */}
          {/* <Position/>   */}
+
+        <FlexBox />
       </ScrollView>
     </View>
   );
