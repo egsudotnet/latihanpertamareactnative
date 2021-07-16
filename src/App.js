@@ -5,6 +5,7 @@ import SampleComponent from './pages/SampleComponent';
   import FlexBox from './pages/FlexBox';
 import Position from './pages//Position';
 import PropsDinamis from './pages/PropsDinamis';
+import StateDinamis from './pages/StateDinamis';
 //  todo tidak scroll
 const app = () => {
   // const [isShow, SetIsShow]= useState(true);
@@ -24,7 +25,8 @@ const app = () => {
         {/* {isShow && <FlexBox/>} */}
          {/* <Position/>   */} 
         {/* <FlexBox /> */}
-        <PropsDinamis />
+        {/* <PropsDinamis /> */}
+        <StateDinamis />
       </ScrollView>
     </View>
   );
