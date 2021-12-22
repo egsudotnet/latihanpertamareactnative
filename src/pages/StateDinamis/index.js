@@ -20,9 +20,9 @@ class CounterClass extends Component{
     render(){
         return (
             <View>
-                <Text>{this.state.number}</Text>
                 <Button title="Tambah CounterClass" 
                     onPress={() => this.setState({number : this.state.number + 1})}/>
+                <Text>{this.state.number}</Text>
             </View>
         )
     }

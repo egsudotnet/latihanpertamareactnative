@@ -6,6 +6,8 @@ import SampleComponent from './pages/SampleComponent';
 import Position from './pages//Position';
 import PropsDinamis from './pages/PropsDinamis';
 import StateDinamis from './pages/StateDinamis';
+import TestSendiri from './pages/TestSendiri';
+import Communication from './pages/Communication';
 //  todo tidak scroll
 const app = () => {
   // const [isShow, SetIsShow]= useState(true);
@@ -23,10 +25,14 @@ const app = () => {
         {/* <SampleComponent/>    
         <StylingComponent/>   */}
         {/* {isShow && <FlexBox/>} */}
-         {/* <Position/>   */} 
+        {/* <Position/>      */}
         {/* <FlexBox /> */}
-        {/* <PropsDinamis /> */}
-        <StateDinamis />
+        {/*  <PropsDinamis />*/} 
+        {/* <StateDinamis/> */}
+        {/* <TestSendiri />  */}
+        {/* <Position /> */}
+
+        <Communication/> 
       </ScrollView>
     </View>
   );
@@ -39,6 +45,8 @@ export default app;
 //https://www.youtube.com/watch?v=40vX41Qao5M&list=PLU4DS8KR-LJ3SP3PpRb870UoT_0_rjLpV&index=14
 //https://www.youtube.com/watch?v=gWqgPJ_j2LI&list=PLU4DS8KR-LJ3SP3PpRb870UoT_0_rjLpV&index=15 - React Native Debuger Siklus hidup ()
 //https://www.youtube.com/watch?v=Y6qXMEwp3ng&list=PLU4DS8KR-LJ3SP3PpRb870UoT_0_rjLpV&index=16 - Siklus hidup Fucntional Component
+
+//https://www.youtube.com/watch?v=4AsOTDdmx_I&list=PLU4DS8KR-LJ3SP3PpRb870UoT_0_rjLpV&index=20//
 //  a8esWnLN8mtbLdDxgfnF
 
 // //  /**
