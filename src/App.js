@@ -59,6 +59,9 @@ export default app;
 // https://www.youtube.com/watch?v=jKo9B5vxy_0&list=PLU4DS8KR-LJ3SP3PpRb870UoT_0_rjLpV&index=23 - Cara menggunakan image SVG didalam project React Native
 
 //https://www.youtube.com/watch?v=PiUbEmn5gog&list=PLU4DS8KR-LJ3SP3PpRb870UoT_0_rjLpV&index=29  Implementasi Pemanggilan API di Aplikasi React Native dengan Vanilla JS
+//https://www.youtube.com/watch?v=nG31HQD1xRk&list=PLU4DS8KR-LJ3SP3PpRb870UoT_0_rjLpV&index=30  28 - Memunculkan Hasil Call API ke Aplikasi React Native
+
+
 // //  /**
 // //  * Sample React Native App
 // //  * https://github.com/facebook/react-native
