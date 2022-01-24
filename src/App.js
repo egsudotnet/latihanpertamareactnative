@@ -8,6 +8,10 @@ import PropsDinamis from './pages/PropsDinamis';
 import StateDinamis from './pages/StateDinamis';
 import TestSendiri from './pages/TestSendiri';
 import Communication from './pages/Communication';
+import BasicJavascript from './pages/BasicJavascript';
+import ReactNativeSvg from './pages/ReactNativeSvg';
+import CallAPIVanilla from './pages/CallAPIVanilla';
+
 //  todo tidak scroll
 const app = () => {
   // const [isShow, SetIsShow]= useState(true);
@@ -30,9 +34,11 @@ const app = () => {
         {/*  <PropsDinamis />*/} 
         {/* <StateDinamis/> */}
         {/* <TestSendiri />  */}
-        {/* <Position /> */}
-
-        <Communication/> 
+        {/* <Position /> */} 
+        {/* <Communication/>  */}
+        {/* <BasicJavascript/> */}
+        {/* <ReactNativeSvg/> */}
+        <CallAPIVanilla/>
       </ScrollView>
     </View>
   );
@@ -47,8 +53,12 @@ export default app;
 //https://www.youtube.com/watch?v=Y6qXMEwp3ng&list=PLU4DS8KR-LJ3SP3PpRb870UoT_0_rjLpV&index=16 - Siklus hidup Fucntional Component
 
 //https://www.youtube.com/watch?v=4AsOTDdmx_I&list=PLU4DS8KR-LJ3SP3PpRb870UoT_0_rjLpV&index=20//
-//  a8esWnLN8mtbLdDxgfnF
+//https://www.youtube.com/watch?v=G3m98l8FeZw&list=PLU4DS8KR-LJ3SP3PpRb870UoT_0_rjLpV&index=21
+//https://www.youtube.com/watch?v=jAdX2ll_e_c&list=PLU4DS8KR-LJ3SP3PpRb870UoT_0_rjLpV&index=22 - Basic Javascript yang perlu difahami untuk belajar React Native - Variable, Function, Condition
 
+// https://www.youtube.com/watch?v=jKo9B5vxy_0&list=PLU4DS8KR-LJ3SP3PpRb870UoT_0_rjLpV&index=23 - Cara menggunakan image SVG didalam project React Native
+
+//https://www.youtube.com/watch?v=PiUbEmn5gog&list=PLU4DS8KR-LJ3SP3PpRb870UoT_0_rjLpV&index=29  Implementasi Pemanggilan API di Aplikasi React Native dengan Vanilla JS
 // //  /**
 // //  * Sample React Native App
 // //  * https://github.com/facebook/react-native
