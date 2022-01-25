@@ -76,5 +76,5 @@ const styles = StyleSheet.create({
     container : {padding:20, alignItems: 'center'},
     textTitle : {textAlign: 'center'},
     line:{width:200, height:2, backgroundColor:'black', marginVertical:20},
-    avatar:{width:100, height:100, borderWidth:2}
+    avatar:{width:100, height:100, borderWidth:2, borderRadius:50}
 });
