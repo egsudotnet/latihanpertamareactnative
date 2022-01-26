@@ -11,6 +11,7 @@ import Communication from './pages/Communication';
 import BasicJavascript from './pages/BasicJavascript';
 import ReactNativeSvg from './pages/ReactNativeSvg';
 import CallAPIVanilla from './pages/CallAPIVanilla';
+import CallAPIAxios from './pages/CallAPIAxios';
 
 //  todo tidak scroll
 const app = () => {
@@ -38,7 +39,8 @@ const app = () => {
         {/* <Communication/>  */}
         {/* <BasicJavascript/> */}
         {/* <ReactNativeSvg/> */}
-        <CallAPIVanilla/>
+        {/* <CallAPIVanilla/> */}
+        <CallAPIAxios/>
       </ScrollView>
     </View>
   );

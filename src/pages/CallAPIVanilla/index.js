@@ -11,6 +11,10 @@ const CallAPIVanilla = () =>{
         first_name:'',
         last_name:''
     })
+    const [dataJob, setDataJob] = useState({ 
+        name:'',
+        job:''
+    })
     useEffect(()=>{
         // // CALL API Methode GET
         //     fetch('https://reqres.in/api/users/2')
@@ -38,11 +42,11 @@ const CallAPIVanilla = () =>{
                 setDataUser(json.data)
             })
             
-            // CALL API Methode POS
-            const dataForAPI = {
-                name:"morpheus",
-                job:"leader"
-            }
+        }
+        // CALL API Methode POS
+        const dataForAPI = {
+            name:"morpheus sss",
+            job:"leader"
         }
         const postData = () =>{ 
             fetch('https://reqres.in/api/users',{
@@ -53,19 +57,43 @@ const CallAPIVanilla = () =>{
                 body:JSON.stringify(dataForAPI)
             })
             .then(response => response.json())
-            .then(json => console.log('Post Response ',json))
+            .then(json => { 
+                setDataJob(json)
+                //alert(JSON.stringify(json))
+               //  alert("Data Tersimpan")
+            })
+        }
+        
+        // CALL API Methode GET
+        const cleartData = () =>{ 
+            setDataUser({
+                avatar:'',
+                email:'',
+                first_name:'',
+                last_name:''
+            });
         }
     return (
         <View style={styles.container}>
             <Text style={styles.textTitle}>Call API dengan vanilla.js</Text>   
             <View style={styles.line}></View> 
-            <Button title="GET Data" onPress={getData} />
+
+            <View style={styles.container}>
+                <Button title="GET Data" onPress={getData}  style={styles.container}/>
+            </View>
+            <View style={styles.container}>
+                <Button title="CLEAR Data" onPress={cleartData}  style={styles.container}/>
+            </View>
+
             <Text>Response GET Data</Text>
             <Image source={{uri : dataUser.avatar}} style={styles.avatar}/>
             <Text>{dataUser.first_name} {dataUser.last_name}</Text>
             <Text>{dataUser.email}</Text>
             <View style={styles.line}></View> 
-            <Button title="POST Data"/>
+            
+            <Button title="POST Data"  onPress={postData} />
+            <Text>{dataJob.name}</Text>
+            <Text>{dataJob.job}</Text>
             <Text style={styles.line}>Response POST Data</Text>
         </View>
     );
