@@ -13,6 +13,7 @@
     "axios": "^0.25.0",
     "react": "17.0.1",
     "react-native": "0.64.2",
+    "react-native-axios": "^0.17.1",
     "react-native-svg": "^12.1.1",
     "react-native-svg-transformer": "^1.0.0"
   },

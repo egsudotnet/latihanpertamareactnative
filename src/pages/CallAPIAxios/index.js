@@ -1,4 +1,5 @@
-import { Axios } from "axios";
+//import { Axios } from "axios";
+import * as Axios from 'axios';
 import React, { useEffect, useState } from "react";
 import { Button, StyleSheet, Text, Touchable, TouchableOpacity, View ,Image} from "react-native"; 
 import { backgroundColor } from "react-native/Libraries/Components/View/ReactNativeStyleAttributes";
@@ -18,11 +19,10 @@ const CallAPIAxios = () =>{
     }) 
  
     // CALL API Methode GET
-    const getData = () =>{  
-        
+    const getData = () =>{
         Axios.get('https://reqres.in/api/users/3')
         .then(result => {
-            setDataUser(result.data)
+            setDataUser(result.data.data)
         })
         .catch(err => console.log('err: ', err)) 
     }
@@ -32,19 +32,11 @@ const CallAPIAxios = () =>{
         job:"leader"
     }
     const postData = () =>{ 
-        fetch('https://reqres.in/api/users',{
-            method:"POST",
-            headers:{
-                'content-type':'application/json'
-            },
-            body:JSON.stringify(dataForAPI)
+        Axios.post('https://reqres.in/api/users',dataForAPI)
+        .then(result => {
+            setDataJob(result.data)
         })
-        .then(response => response.json())
-        .then(json => { 
-            setDataJob(json)
-            //alert(JSON.stringify(json))
-            //  alert("Data Tersimpan")
-        })
+        .catch(err => console.log('err: ', err)); 
     }
     
     // CALL API Methode GET
@@ -59,7 +51,7 @@ const CallAPIAxios = () =>{
 
     return (
         <View style={styles.container}>
-            <Text style={styles.textTitle}>Call API dengan CallAPIAxios</Text>   
+            <Text style={styles.textTitle}>Call API dengan Axios</Text>   
             <View style={styles.line}></View> 
 
             <View style={styles.container}>
