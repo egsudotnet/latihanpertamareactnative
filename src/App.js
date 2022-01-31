@@ -12,6 +12,7 @@ import BasicJavascript from './pages/BasicJavascript';
 import ReactNativeSvg from './pages/ReactNativeSvg';
 import CallAPIVanilla from './pages/CallAPIVanilla';
 import CallAPIAxios from './pages/CallAPIAxios';
+import LocalAPI from './pages/LocalAPI';
 
 //  todo tidak scroll
 const app = () => {
@@ -40,7 +41,8 @@ const app = () => {
         {/* <BasicJavascript/> */}
         {/* <ReactNativeSvg/> */}
         {/* <CallAPIVanilla/> */}
-        <CallAPIAxios/>
+        {/* <CallAPIAxios/> */}
+        <LocalAPI/>
       </ScrollView>
     </View>
   );
@@ -64,121 +66,11 @@ export default app;
 //https://www.youtube.com/watch?v=nG31HQD1xRk&list=PLU4DS8KR-LJ3SP3PpRb870UoT_0_rjLpV&index=30  28 - Memunculkan Hasil Call API ke Aplikasi React Native
 
 //https://www.youtube.com/watch?v=aCtFd8YSr5M&list=PLU4DS8KR-LJ3SP3PpRb870UoT_0_rjLpV&index=31  29 - Call API dengan Third Party dan Installasi Axios
+ 
+//https://www.youtube.com/watch?v=NcdYpU_0Ahk&list=PLU4DS8KR-LJ3SP3PpRb870UoT_0_rjLpV&index=32  30 - Membuat Fake API di local dan Installasi JSON Server  
+// https://github.com/typicode/json-server  
+// https://stackoverflow.com/questions/54776324/powershell-bug-execution-of-scripts-is-disabled-on-this-system
 
-// //  /**
-// //  * Sample React Native App
-// //  * https://github.com/facebook/react-native
-// //  *
-// //  * @format
-// //  * @flow strict-local
-// //  */
+//https://www.youtube.com/watch?v=tCD523C51_A&list=PLU4DS8KR-LJ3SP3PpRb870UoT_0_rjLpV&index=33 31 - Menyiapkan UI Component untuk Implementasi Proses CRUD
 
-// // import SampleComponent from './SampleComponent';
-// // import StylingReactnativeComponent from './StylingReactnativeComponent';
-// // import React from 'react';
-// // import type {Node} from 'react';
-// // import {
-// //   SafeAreaView,
-// //   ScrollView,
-// //   StatusBar,
-// //   StyleSheet,
-// //   Text,
-// //   useColorScheme,
-// //   View,
-// // } from 'react-native';
-
-// // import {
-// //   Colors,
-// //   DebugInstructions,
-// //   Header,
-// //   LearnMoreLinks,
-// //   ReloadInstructions,
-// // } from 'react-native/Libraries/NewAppScreen';
-
-// // const Section = ({children, title}): Node => {
-// //   const isDarkMode = useColorScheme() === 'dark';
-// //   return (
-// //     <View style={styles.sectionContainer}>
-// //       <Text
-// //         style={[
-// //           styles.sectionTitle,
-// //           {
-// //             color: isDarkMode ? Colors.white : Colors.black,
-// //           },
-// //         ]}>
-// //         {title}
-// //       </Text>
-// //       <Text
-// //         style={[
-// //           styles.sectionDescription,
-// //           {
-// //             color: isDarkMode ? Colors.light : Colors.dark,
-// //           },
-// //         ]}>
-// //         {children}
-// //       </Text>
-// //     </View>
-// //   );
-// // };
-
-// // const App: () => Node = () => {
-// //   const isDarkMode = useColorScheme() === 'dark';
-
-// //   const backgroundStyle = {
-// //     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-// //   };
-
-// //   return (
-// //     <SafeAreaView style={backgroundStyle}>
-// //       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-// //       <ScrollView
-// //         contentInsetAdjustmentBehavior="automatic"
-// //         style={backgroundStyle}>
-// //         <Header />
-// //         <View
-// //           style={{
-// //             backgroundColor: isDarkMode ? Colors.black : Colors.white,
-// //           }}>
-// //           <Section title="Step One">
-// //             Edit <Text style={styles.highlight}>App.js</Text> to change this
-// //             screen and then come back to see your edits.
-// //           </Section>
-// //           <Section title="See Your Changes">
-// //             <ReloadInstructions />
-// //           </Section>
-// //           <Section title="Debug">
-// //             <DebugInstructions />
-// //           </Section>
-// //           <Section title="Learn More">
-// //             Read the docs to discover what to do next:
-// //           </Section>
-// //           <SampleComponent/> 
-// //          <StylingReactnativeComponent/>   
-
-// //           {/* <LearnMoreLinks /> */}
-// //         </View>
-// //       </ScrollView>
-// //     </SafeAreaView>
-// //   );
-// // };
-
-// // const styles = StyleSheet.create({
-// //   sectionContainer: {
-// //     marginTop: 32,
-// //     paddingHorizontal: 24,
-// //   },
-// //   sectionTitle: {
-// //     fontSize: 24,
-// //     fontWeight: '600',
-// //   },
-// //   sectionDescription: {
-// //     marginTop: 8,
-// //     fontSize: 18,
-// //     fontWeight: '400',
-// //   },
-// //   highlight: {
-// //     fontWeight: '700',
-// //   },
-// // });
-
-// // export default App;
+//https://www.youtube.com/watch?v=aD6Jhs3CMuc&list=PLU4DS8KR-LJ3SP3PpRb870UoT_0_rjLpV&index=34 32 - Implementasi CRUD di React Native (Create - Method POST)
