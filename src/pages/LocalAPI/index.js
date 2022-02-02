@@ -1,3 +1,5 @@
+
+import * as Axios from 'axios';
 import React, { useEffect, useState } from "react";
 import { Button, StyleSheet, Text, Touchable, TouchableOpacity, View ,Image, TextInput} from "react-native";  
 import { Line } from "react-native-svg";
@@ -16,15 +18,38 @@ const Item = () =>{
     )
 }
 const LocalAPI = () =>{ 
- 
+    const [name, setName]= useState("");
+    const [email, setEmail]= useState("");
+    const [bidang, setBidang]= useState("");
+    const submit= () =>{
+        const data = {
+            name,
+            email,
+            bidang
+        }
+        Axios.post("http://10.0.2.2:3004/users",data)
+        .then(res =>{
+            setName("");
+            setEmail("");
+            setBidang("");
+        })
+    }
+    const reset= () =>{ 
+        setName("");
+        setEmail("");
+        setBidang("");
+    }
     return (
         <View style={styles.container}>
             <Text style={styles.textTitle}>Local API (JSON-Server)</Text>
             <Text>Masukan Anggota Kabayan Coding</Text>  
-            <TextInput placeholder="Nama Lengkap" style={styles.input}/> 
-            <TextInput placeholder="Email" style={styles.input}/> 
-            <TextInput placeholder="Bidang" style={styles.input}/> 
-            <Button title="Simpan"/>
+            <TextInput placeholder="Nama Lengkap" style={styles.input} value={name} onChangeText={(value)=>setName(value)}/> 
+            <TextInput placeholder="Email" style={styles.input} value={email} onChangeText={(value)=>setEmail(value)}/> 
+            <TextInput placeholder="Bidang" style={styles.input} value={bidang} onChangeText={(value)=>setBidang(value)}/>
+            <View  style={styles.buttonContainer}>
+                <Button title="Simpan"  style={styles.tombol} onPress={submit}/> 
+                <Button title="Reset"  style={styles.tombol} onPress={reset}/> 
+            </View> 
             <View style={styles.line}/>
             <Item/>
             <Item/>
@@ -46,5 +71,7 @@ const styles = StyleSheet.create({
     descName : {fontSize: 20, marginBottom:10},
     descEmail :{fontSize: 16, marginBottom:5},
     descBidang : {fontSize: 12, marginBottom:5},
-    delete : {color:"red",textAlign:"right"},
+    delete : {color:"red",textAlign:"right",marginLeft:10},
+    buttonContainer : {marginBottom:20},
+    tombol : {marginBottom:20},
 });
