@@ -1,19 +1,21 @@
 {
-  "posts": [
+  "users": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "name": "Egih",
+      "email": "egsu@email.com",
+      "bidang": ".Net Dev"
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "name": "egsu",
+      "email": "asamail.com",
+      "id": 2
+    },
+    {
+      "name": "aaaa",
+      "email": "aaa@mail.com",
+      "bidang": "sss B",
+      "id": 3
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
