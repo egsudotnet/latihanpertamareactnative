@@ -9,7 +9,7 @@ const Item = () =>{
         <View style={styles.itemContainer}>
             <Image source={{uri:"https://ui-avatars.com/api/?name=egih+s"}} style={styles.avatar}/>
             <View style={styles.desc}>
-                <Text style={styles.descName}>Nama Lengkap</Text>  
+                <Text style={styles.descName}>{name}</Text>  
                 <Text style={styles.descEmail}>Email</Text>  
                 <Text style={styles.descBidang}>Bidang</Text>  
             </View>  
@@ -32,6 +32,15 @@ const LocalAPI = () =>{
             setName("");
             setEmail("");
             setBidang("");
+        })
+    }
+    useEffect(()=>{
+        getData();
+    })
+    const getData= () =>{ 
+        Axios.get("http://10.0.2.2:3004/users")
+        .then(res =>{ 
+            
         })
     }
     const reset= () =>{ 
