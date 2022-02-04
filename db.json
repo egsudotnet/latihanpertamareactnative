@@ -7,15 +7,46 @@
       "bidang": ".Net Dev"
     },
     {
+      "id": 2,
       "name": "egsu",
       "email": "asamail.com",
-      "id": 2
+      "bidang": "CCC B"
     },
     {
+      "id": 3,
       "name": "aaaa",
       "email": "aaa@mail.com",
-      "bidang": "sss B",
-      "id": 3
+      "bidang": "sss B"
+    },
+    {
+      "id": 4,
+      "name": "Budi",
+      "email": "Budi@mail.com",
+      "bidang": "RN Dev"
+    },
+    {
+      "id": 5,
+      "name": "Kevin",
+      "email": "kev@mail.com",
+      "bidang": ".Net Core"
+    },
+    {
+      "name": "Asep",
+      "email": "asep@mail.com",
+      "bidang": "Bengkel",
+      "id": 6
+    },
+    {
+      "name": "Putri",
+      "email": "put@mail.comDesai",
+      "bidang": "DKV",
+      "id": 7
+    },
+    {
+      "name": "",
+      "email": "",
+      "bidang": "",
+      "id": 8
     }
   ]
 }
