@@ -4,12 +4,12 @@ import React, { useEffect, useState } from "react";
 import { Button, StyleSheet, Text, Touchable, TouchableOpacity, View ,Image, TextInput} from "react-native";  
 import { Line } from "react-native-svg";
 
-const Item = ({name,email,bidang, onPressButtonDelete}) =>{
+const Item = ({name,email,bidang, onPressButtonDelete,onPressButtonSelect}) =>{
     return (
         <View style={styles.itemContainer}>
-            <TouchableOpacity onPress={onPressButtonDelete}>
+            <TouchableOpacity onPress={onPressButtonSelect}>
                 <Image source={{uri:`https://ui-avatars.com/api/?name=${name}+${bidang}`}} style={styles.avatar}/>
-        </TouchableOpacity>
+            </TouchableOpacity>
             <View style={styles.desc}>
                 <Text style={styles.descName}>{name}</Text>  
                 <Text style={styles.descEmail}>{email}</Text>  
@@ -50,6 +50,11 @@ const LocalAPI = () =>{
             setUsers(res.data);
         })
     }
+    const setData= (data) =>{ 
+        setName(data.name);
+        setEmail(data.email);
+        setBidang(data.bidang); 
+    }
     
     const deleteData= (key) =>{
         const data = {
@@ -81,7 +86,7 @@ const LocalAPI = () =>{
             </View> 
             <View style={styles.line}/>
             {users.map(user => {
-                return <Item key={user.id} name={user.name} email={user.email} bidang={user.bidang} onPressButtonDelete={()=>deleteData(user.id)}/>
+                return <Item key={user.id} name={user.name} email={user.email} bidang={user.bidang} onPressButtonDelete={()=>deleteData(user)}  onPressButtonSelect={()=>setData(user)}/> 
             })}
         </View>
     );
