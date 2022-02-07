@@ -28,18 +28,26 @@ const LocalAPI = () =>{
     const [email, setEmail]= useState("");
     const [bidang, setBidang]= useState("");
     const [users, setUsers]= useState([]);
+    const [actionLabel, setActionLabel]= useState("Simpan");
     const submit= () =>{
         const data = {
             name,
             email,
             bidang
         }
-        Axios.post("http://10.0.2.2:3004/users",data)
-        .then(res =>{
-            setName("");
-            setEmail("");
-            setBidang("");
-        })
+        if(actionLabel=="Simpan"){
+            Axios.post("http://10.0.2.2:3004/users",data)
+            .then(res =>{
+                setName("");
+                setEmail("");
+                setBidang("");
+            }) 
+        }else{
+            Axios.put("http://10.0.2.2:3004/users",data)
+            .then(res =>{
+                reset();
+            })  
+        }
     }
     useEffect(()=>{
         getData();
@@ -54,6 +62,8 @@ const LocalAPI = () =>{
         setName(data.name);
         setEmail(data.email);
         setBidang(data.bidang); 
+        
+        setActionLabel("Update");
     }
     
     const deleteData= (key) =>{
@@ -71,6 +81,7 @@ const LocalAPI = () =>{
         setEmail("");
         setBidang("");
         setUsers([]);
+        setActionLabel("Simpan");
     }
     return (
         <View style={styles.container}>
@@ -81,12 +92,12 @@ const LocalAPI = () =>{
             <TextInput placeholder="Email" style={styles.input} value={email} onChangeText={(value)=>setEmail(value)}/> 
             <TextInput placeholder="Bidang" style={styles.input} value={bidang} onChangeText={(value)=>setBidang(value)}/>
             <View  style={styles.buttonContainer}>
-                <Button title="Simpan"  style={styles.tombol} onPress={submit}/> 
+                <Button title={actionLabel}  style={styles.tombol} onPress={submit}/> 
                 <Button title="Reset"  style={styles.tombol} onPress={reset}/> 
             </View> 
             <View style={styles.line}/>
             {users.map(user => {
-                return <Item key={user.id} name={user.name} email={user.email} bidang={user.bidang} onPressButtonDelete={()=>deleteData(user)}  onPressButtonSelect={()=>setData(user)}/> 
+                return <Item key={user.id} name={user.name} email={user.email} bidang={user.bidang} onPressButtonDelete={()=>deleteData(user.id)}  onPressButtonSelect={()=>setData(user)}/> 
             })}
         </View>
     );
