@@ -1,16 +1,16 @@
 {
   "users": [
     {
-      "id": 1,
       "name": "Egih",
       "email": "egsu@email.com",
-      "bidang": ".Net Dev"
+      "bidang": ".Net Dev AAA BBB",
+      "id": 1
     },
     {
-      "id": 2,
       "name": "egsu",
       "email": "asamail.com",
-      "bidang": "CCC B"
+      "bidang": "CCC B C",
+      "id": 2
     },
     {
       "id": 3,

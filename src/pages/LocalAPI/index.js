@@ -29,6 +29,8 @@ const LocalAPI = () =>{
     const [bidang, setBidang]= useState("");
     const [users, setUsers]= useState([]);
     const [actionLabel, setActionLabel]= useState("Simpan");
+    const [selectedUser, setSelectedUser]= useState([]);
+
     const submit= () =>{
         const data = {
             name,
@@ -43,7 +45,7 @@ const LocalAPI = () =>{
                 setBidang("");
             }) 
         }else{
-            Axios.put("http://10.0.2.2:3004/users",data)
+            Axios.put(`http://10.0.2.2:3004/users/${selectedUser.id}`,data)
             .then(res =>{
                 reset();
             })  
@@ -58,7 +60,8 @@ const LocalAPI = () =>{
             setUsers(res.data);
         })
     }
-    const setData= (data) =>{ 
+    const selectItem= (data) =>{ 
+        setSelectedUser(data);
         setName(data.name);
         setEmail(data.email);
         setBidang(data.bidang); 
@@ -97,7 +100,7 @@ const LocalAPI = () =>{
             </View> 
             <View style={styles.line}/>
             {users.map(user => {
-                return <Item key={user.id} name={user.name} email={user.email} bidang={user.bidang} onPressButtonDelete={()=>deleteData(user.id)}  onPressButtonSelect={()=>setData(user)}/> 
+                return <Item key={user.id} name={user.name} email={user.email} bidang={user.bidang} onPressButtonDelete={()=>deleteData(user.id)}  onPressButtonSelect={()=>selectItem(user)}/> 
             })}
         </View>
     );
