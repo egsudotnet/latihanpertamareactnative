@@ -42,8 +42,8 @@ const app = () => {
         {/* <ReactNativeSvg/> */}
         {/* <CallAPIVanilla/> */}
         {/* <CallAPIAxios/> */}
-        <LocalAPI/>
       </ScrollView>
+        <LocalAPI/>
     </View>
   );
 };
@@ -76,3 +76,5 @@ export default app;
 //https://www.youtube.com/watch?v=aD6Jhs3CMuc&list=PLU4DS8KR-LJ3SP3PpRb870UoT_0_rjLpV&index=34 32 - Implementasi CRUD di React Native (Create - Method POST)
 
 // https://www.youtube.com/watch?v=LVNxKZxYOD0&list=PLU4DS8KR-LJ3SP3PpRb870UoT_0_rjLpV&index=35 33 - Implementasi CRUD di React Native (Read - Method GET)
+
+// https://www.youtube.com/watch?v=IWpIrboBu9g&list=PLU4DS8KR-LJ3SP3PpRb870UoT_0_rjLpV&index=37 35 - Implementasi CRUD di React Native (Delete - Method DELETE)
