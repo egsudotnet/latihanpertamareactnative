@@ -1,7 +1,7 @@
 
 import * as Axios from 'axios';
 import React, { useEffect, useState } from "react";
-import { Button, StyleSheet, Text, Touchable, TouchableOpacity, View ,Image, TextInput} from "react-native";  
+import { Button, StyleSheet, Text, Touchable, TouchableOpacity, View ,Image, TextInput, ScrollView, Alert} from "react-native";  
 import { Line } from "react-native-svg";
 
 const Item = ({name,email,bidang, onPressButtonDelete,onPressButtonSelect}) =>{
@@ -69,13 +69,10 @@ const LocalAPI = () =>{
         setActionLabel("Update");
     }
     
-    const deleteData= (key) =>{
-        const data = {
-            "id":key
-        }
-        Axios.delete("http://10.0.2.2:3004/users",data)
+    const deleteItem= (item) =>{ 
+        Axios.delete(`http://10.0.2.2:3004/users/${item.id}`)
         .then(res =>{
-            getData();
+            reset();
         })
     }
 
@@ -99,9 +96,32 @@ const LocalAPI = () =>{
                 <Button title="Reset"  style={styles.tombol} onPress={reset}/> 
             </View> 
             <View style={styles.line}/>
-            {users.map(user => {
-                return <Item key={user.id} name={user.name} email={user.email} bidang={user.bidang} onPressButtonDelete={()=>deleteData(user.id)}  onPressButtonSelect={()=>selectItem(user)}/> 
-            })}
+            
+            <ScrollView>
+                {users.map(user => {
+                    return <Item 
+                    key={user.id} 
+                    name={user.name} 
+                    email={user.email} 
+                    bidang={user.bidang} 
+                    onPressButtonSelect={()=>selectItem(user)}
+                    onPressButtonDelete={()=> Alert.alert(
+                            "Peringatan",
+                            "Anda yaki akan menghapus uer ini?",
+                            [
+                                {
+                                    text: "Tidak"
+                                },
+                                {
+                                    text: "Ya",
+                                    onPress: () => deleteItem(user)
+                                }
+                            ] 
+                        )    
+                        }  
+                    /> 
+                })}
+            </ScrollView>
         </View>
     );
 }
